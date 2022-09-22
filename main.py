@@ -1,8 +1,18 @@
-# 这是一个示例 Python 脚本。
+import pyqrcode
+import png
+from pyqrcode import QRCode
 
-# 按 Shift+F10 执行或将其替换为您的代码。
-# 按 双击 Shift 在所有地方搜索类、文件、工具窗口、操作和设置。
+# Text which is to be converted to QR code
+print("Enter text to convert")
+s = input(": ")
+# Name of QR code png file
+print("Enter image name to save")
+n = input(": ")
+# Adding extension as .pnf
+d = n + ".png"
+# Creating QR code
+url = pyqrcode.create(s)
+# Saving QR code as  a png file
+url.show()
+url.png(d, scale=6)
 
-# 该实例输出 Hello World!
-
-print('Hello World!')
